@@ -1,6 +1,6 @@
 
 
-# 🔍 EzFix - Steam DRM & Online-Fix Checker
+# 🔍 Steam DRM & Online-Fix Checker
 
 <p align="center">
   <img src="https://capsule-render.vercel.app/render?type=soft&color=2ecc71&height=150&section=header&text=EzFix%20Bot&fontSize=50&animation=fadeIn" alt="EzFix Header" />
