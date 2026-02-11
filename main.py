@@ -4,10 +4,10 @@ import aiohttp
 from bs4 import BeautifulSoup
 import urllib.parse
 import os
-from keep_alive import keep_alive  # เรียกใช้ฟังก์ชันกันหลับ
+from keep_alive import keep_alive  
 
-# --- ใส่ TOKEN ใหม่ของคุณตรงนี้ ---
-BOT_TOKEN = os.getenv('TOKEN')
+
+BOT_TOKEN = os.getenv('ใส่ TOKEN บอท ดิสคอร์ด')
 
 class MyClient(discord.Client):
     def __init__(self):
@@ -20,7 +20,7 @@ class MyClient(discord.Client):
 
 client = MyClient()
 
-# --- 1. ฟังก์ชันดึงชื่อเกม (Steam API) ---
+# --- ดึงชื่อเกม (Steam API) ---
 async def get_steam_game_name(appid):
     url = f"https://store.steampowered.com/api/appdetails?appids={appid}"
     async with aiohttp.ClientSession() as session:
@@ -31,7 +31,7 @@ async def get_steam_game_name(appid):
                     return data[str(appid)]['data']['name']
     return None
 
-# --- 2. ฟังก์ชันเช็คไฟล์ Fix (Scraping OnlineFix) ---
+# --- 2. เช็คไฟล์ Fix  ---
 async def check_onlinefix_status(game_name):
     safe_name = urllib.parse.quote_plus(game_name)
     search_url = f"https://online-fix.me/index.php?do=search&subaction=search&story={safe_name}"
@@ -51,7 +51,7 @@ async def check_onlinefix_status(game_name):
         return False
     return False
 
-# --- 3. ฟังก์ชันดึง DRM (Scraping Steam Store โดยตรง) ---
+# --- 3. เช็ค DRM ---
 async def get_drm_notice(appid):
     url = f"https://store.steampowered.com/app/{appid}/"
     cookies = {'birthtime': '631180801', 'mature_content': '1'}
@@ -78,7 +78,7 @@ async def get_drm_notice(appid):
     
     return "Not provided"
 
-# --- คำสั่ง Slash Command ---
+# --- คำสั่ง /  ---
 @client.tree.command(name="ezfix", description="เช็คสถานะเกมและ DRM")
 @app_commands.describe(steam_appid="ใส่เลข AppID ของ Steam")
 async def ezfix(interaction: discord.Interaction, steam_appid: str):
@@ -125,6 +125,7 @@ async def ezfix(interaction: discord.Interaction, steam_appid: str):
 async def on_ready():
     print(f'Logged in as {client.user}')
 
-# --- ส่วนสำคัญ: สั่งเปิด Web Server ก่อนรันบอท ---
+
 keep_alive()
+
 client.run(BOT_TOKEN)
