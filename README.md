@@ -3,9 +3,28 @@
 # 🔍 EzFix - Steam DRM & Online-Fix Checker
 
 <p align="center">
+  <img src="https://capsule-render.vercel.app/render?type=soft&color=2ecc71&height=150&section=header&text=EzFix%20Bot&fontSize=50&animation=fadeIn" alt="EzFix Header" />
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Status-Prototype-yellow?style=for-the-badge" alt="Prototype Status" />
   <img src="https://img.shields.io/badge/Python-3.9+-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python Version" />
   <img src="https://img.shields.io/badge/Library-BeautifulSoup4-orange?style=for-the-badge" alt="BeautifulSoup" />
   <img src="https://img.shields.io/badge/API-Steam_Web_API-blue?style=for-the-badge&logo=steam" alt="Steam API" />
+</p>
+
+---
+
+## 🌐 Project Evolution: From Bot to Web App
+> **Note:** This Discord bot served as the **foundational prototype** logic before being re-engineered and fully integrated into my personal platform.
+
+You can now experience the enhanced, high-performance version of **EzFix Tool** directly on my website:
+👉 **[Visit EzplaystoreTh.xyz](https://ezplaystoreth.xyz/ezfix)**
+
+<p align="center">
+<img width="1909" height="987" alt="image" src="https://github.com/user-attachments/assets/ef6f0b3f-30f0-46c8-87c4-a1ae3a9525fe" width="90%" alt="EzFix Web Version" />
+  <br>
+  <i>The evolved EzFix Tool running on Next.js at EzplaystoreTh</i>
 </p>
 
 ---
@@ -51,6 +70,4 @@ This tool is for educational purposes and personal information gathering regardi
 <p align="center">
 Developed by <a href="https://www.google.com/search?q=https://github.com/novterss">novterss</a> | <b>Computer Science Student</b>
 </p>
-
-```
 
